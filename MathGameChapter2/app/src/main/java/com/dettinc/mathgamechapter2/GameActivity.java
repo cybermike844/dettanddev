@@ -2,10 +2,11 @@ package com.dettinc.mathgamechapter2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstancePhase) {
@@ -38,5 +39,25 @@ public class GameActivity extends AppCompatActivity {
         buttonObjectChoice2.setText("" + wrongAnswer1);
         buttonObjectChoice3.setText("" + wrongAnswer2);
 
+        buttonObjectChoice1.setOnClickListener(this);
+        buttonObjectChoice2.setOnClickListener(this);
+        buttonObjectChoice3.setOnClickListener(this);
     }//onCreate ends here
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.buttonChoice1:
+                //button1 stuff goes here
+                break;
+
+            case R.id.buttonChoice2:
+                //button2 stuff goes here
+                break;
+
+            case R.id.buttonChoice3:
+                //button3 stuff goes here
+                break;
+        }
+    }
 }
